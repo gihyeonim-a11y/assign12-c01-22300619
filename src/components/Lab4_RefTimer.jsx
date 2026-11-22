@@ -5,11 +5,13 @@ export default function Lab4RefTimer() {
   const [count, setCount] = useState(0);
   const [running, setRunning] = useState(false);
   // TODO 1: 타이머 ID를 유지할 timerRef 생성 (초기값 null)
-
+  const timerRef = useRef(0);
+  
   const start = () => {
     // TODO 2: timerRef.current에 타이머가 있으면 중복 시작 방지
     // TODO 3: setInterval의 반환 ID를 timerRef.current에 보관
     // TODO 4: 1초마다 count 증가, running을 true로 변경
+    timerRef.current+=1;
   };
 
   const stop = () => {
